@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title></title>	
+	</head>
+	<body>
+		<select class="itemCombobox">
+			<option value="Item 1">Item 1</option>
+		</select>
+		
+		<ul class="item">
+			<li>Item 1</li>
+		</ul>
+		
+		<table class="itemTabela">
+			<tbody>
+				<tr>
+					<td>Item 1</td>
+				</tr>
+			</tbody>
+		</table>
+		<button type="button" id="btnAdicionar">Adicionar</button>
+		<button type="button" id="btnApagar">Apagar</button>
+		
+		<table class="produtos">
+			<tbody>
+				<tr>
+					<td>32554</td>
+					<td><span class="excluir">Excluir</span></td>
+				</tr>
+				<tr>
+					<td>98760</td>
+					<td><span class="excluir">Excluir</span></td>
+				</tr>
+				<tr>
+					<td>65480</td>
+					<td><span class="excluir">Excluir</span></td>
+				</tr>
+			</tbody>
+		</table>
+		<button type="button" id="btnEncontrar">Encontrar</button>
+		
+		
+		<script type="text/javascript" src="jquery-3.7.0.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				//$('#btnAdicionar').on('click', function () {
+				//	var i = $('.item li').length + 1;
+				//	$('.item').append('<li>Item ' + i + '</li>');
+				//	
+				//	i = $('.itemTabela tr').length + 1;
+				//	$('.itemTabela tbody').append('<tr><td>Item ' + i + '</td></tr>');
+				//	
+				//	i = $('.itemCombobox option').length + 1;
+				//	$('.itemCombobox').append('<option value="Item ' + i + '">Item ' + i + '</option>');
+				//});
+				//
+				//$('#btnApagar').on('click', function () {
+				//	//$('.item').html('');
+				//	$('.item').empty();
+				//});
+				
+				//$('.excluir').on('click', function () {
+				//	$(this).closest('tr').remove();
+				//});
+				
+				$('#btnEncontrar').on('click', function () {
+					$('.produtos tbody tr').each(function (i) {
+						//debugger;
+						var valor = $(this).find('td').html();
+						if(valor == '98760') {
+							$(this).closest('tr').remove();
+						}
+					});
+				});
+			});
+		</script>	
+	</body>
+</html>
+
+
+
+
+

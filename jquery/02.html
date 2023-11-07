@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title></title>	
+	</head>
+	<body>
+		<form>
+			<input type="text" name="nome">
+			<br><br>
+			<select id="itens">
+				<option value="Item 1">Item 1</option>
+				<option value="Item 2">Item 2</option>
+				<option value="Item 3">Item 3</option>
+				<option value="Item 4">Item 4</option>
+				<option value="Item 5">Item 5</option>
+			</select>
+			<br><br>
+			<select id="uf">
+				<option value="SC">SC</option>
+				<option value="RS">RS</option>
+			</select>
+			<br>
+			<select id="cidade">
+			</select>
+			
+			<br><br>
+			<button type="button" id="btnOk">Ok</button>
+			
+			<br><br>
+			<div><span class="excluir">Excluir 1</span></div><br>
+			<div><span class="excluir">Excluir 2</span></div><br>
+			<div><span class="excluir">Excluir 3</span></div><br>
+		</form>
+		<div class="dados">
+			<em>Olá alunos</em>
+		</div>
+		<script type="text/javascript" src="jquery-3.7.0.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				//$('#itens option[value="Item 3"]').prop('selected', true);
+				//
+				//$('input[name="nome"]').val('Cristiano');
+				//
+				//var dados = $('.dados').html();
+				//$('.dados').html('<strong>Boa noite</strong>');
+				//
+				//$('#itens').html('<option value="Item 1">Item 6</option><option value="Item 2">Item 7</option><option value="Item 3">Item 8</option><option value="Item 4">Item 9</option><option value="Item 5">Item 10</option>');
+				
+				//$('#btnOk').on('click', function () {
+				//	//alert('Você clicou neste botão!');
+				//	$('.dados').html('<strong>Boa noite</strong>');
+				//});
+				//
+				//$('.excluir').on('click', function () {
+				//	confirm('Deseja excluir?');
+				//});
+				
+				//$('#uf').on('change', function () {
+				//	//var uf = $('#uf').val();
+				//	var uf = $(this).val();
+				//	if(uf == 'SC') {
+				//		$('#cidade').html('<option value="Criciuma">Criciuma</option><option value="Florianopolis">Florianopolis</option>');
+				//	} else {
+				//		$('#cidade').html('<option value="Porto Alegre">Porto Alegre</option><option value="Gramado">Gramado</option>');
+				//	}
+				//});
+				$('.excluir').on('click', function () {
+					debugger;
+					var btn = $(this);
+					var confirma = confirm('Deseja excluir este item?');
+					if(confirma) {
+						btn.parent().html('');
+					}
+				});
+			});
+		</script>	
+	</body>
+</html>
+
+
+
+
+

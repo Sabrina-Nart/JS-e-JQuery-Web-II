@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title></title>	
+	</head>
+	<body>
+		<div class="conteudo">
+		</div>
+		<button type="button" id="btn">Consultar</button>
+		<button type="button" id="btn2">Local</button>
+		<button type="button" id="btn3">JSON</button>
+		<button type="button" id="btn4">JSON - Array</button>
+		<script type="text/javascript" src="jquery-3.7.0.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$('#btn').on('click', function () {
+					$.ajax({
+						url: '4.php',
+						method: 'GET'
+					}).done(function (html) {
+						$('.conteudo').html(html);
+					});
+				});
+				$('#btn2').on('click', function () {
+					$.ajax({
+						url: '4-1.php',
+						method: 'POST',
+						data: {
+							cidade: 'Criciúma',
+							uf: 'SC'
+						}
+					}).done(function (html) {
+						$('.conteudo').html(html);
+					});
+				});
+				$('#btn3').on('click', function () {
+					$.ajax({
+						url: '4-2.php',
+						method: 'POST',
+						data: {
+							codigo: 1
+						}
+					}).done(function (html) {
+						var item = JSON.parse(html);
+						//debugger;
+						$('.conteudo').html(item.nome);
+					});
+				});
+				$('#btn4').on('click', function () {
+					$.ajax({
+						url: '4-3.php',
+						method: 'POST',
+						data: {
+							codigo: 1
+						}
+					}).done(function (html) {
+						var item = JSON.parse(html);
+						//debugger;
+						$.each(item, function (index, value) {
+							//debugger;
+							$('.conteudo').append(value.nome + '<br>');
+						});
+					});
+				});
+			});
+		</script>	
+	</body>
+</html>
+
+
+
+
+

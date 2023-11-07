@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title></title>	
+	</head>
+	<body>
+		<div class="negrito">Título</div>
+		<div class="texto negrito">Subtítulo</div>
+		<div id="conteudo">Conteúdo</div>
+		<ul>
+			<li>Item 1</li>
+			<li>Item 2</li>
+			<li>Item 3</li>
+		</ul>
+		<ol>
+			<li>Item 4</li>
+			<li>
+				<div>
+					<p>
+						<span>Item 5</span>
+					</p>
+				</div>
+			</li>
+			<li>Item 6</li>
+		</ol>
+		
+		<table>
+			<tbody>
+				<tr>
+					<td>532</td>
+					<td>Vassoura</td>
+					<td>
+						<button class="excluir">Excluir</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<form>
+			<input type="text" name="nome" id="nome" value="Cristiano">
+			<input type="password" name="senha" id="senha" value="654321">
+			<input type="checkbox" name="concordar" id="concordar" checked="checked">
+			<input type="radio" name="confirmar" id="confirmarsim" value="sim">
+			<input type="radio" name="confirmar" id="confirmarnao" value="não" checked="checked">
+			<input type="hidden" name="codigo" id="codigo" value="123">
+			<select name="marca" id="marca">
+				<option value="ford">FORD</option>
+				<option value="gm" selected="selected">GM</option>
+			</select>
+			<select name="curso" id="curso" multiple="multiple">
+				<option value="adm">ADM</option>
+				<option value="si" selected="selected">SI</option>
+				<option value="ef" selected="selected">EF</option>
+				<option value="co">co</option>
+			</select>			
+			<textarea name="comentario" id="comentario">Comentário</textarea>			
+		</form>
+		
+		<script type="text/javascript" src="jquery-3.7.0.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				debugger;
+				//var elemento = $('ul li');
+				
+				//var botao = $('.excluir').parent().parent();
+				//var botao = $('.excluir').closest('tr');
+				
+				//var texto = $('ol li').find('span');
+				
+				//form
+				//var campo = $('#nome').val();
+				//var campo = $('#senha').val();
+				//var campo = $('#concordar').val(); //Não funcionou
+				//var campo = $('#confirmarsim').val(); //Não funcionou
+				//var campo = $('#confirmarnao').val(); //Não funcionou
+				//var campo = $('#codigo').val();
+				//var campo = $('#marca').val();
+				//var campo = $('#curso').val();
+				//var campo = $('#comentario').val();
+				
+				//$('#nome').val('Andreia');
+				//$('#marca').val('ford');
+				//$('#comentario').val('Olá');
+				
+				//var campo = $('#concordar').is(':checked');
+				//var campo = $('#confirmarsim').is(':checked');
+				//var campo = $('#confirmarnao').is(':checked');
+				//if($('#confirmarsim').is(':checked')) {
+				//	alert($('#confirmarsim').val());
+				//} else if($('#confirmarnao').is(':checked')) {
+				//	alert($('#confirmarnao').val());
+				//} else {
+				//	alert('Você precisa aceitar ou não!');
+				//}
+				
+				//$('#concordar').prop('checked', false);
+				//$('#confirmarsim').prop('checked', true);
+				//$('#confirmarnao').prop('checked', true);
+			});
+		</script>	
+	</body>
+</html>
+
+
